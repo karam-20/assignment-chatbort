@@ -126,8 +126,9 @@ const Chatbot = () => {
                     </p>
                     <p className='font-medium '>AI-powered chatbot</p>
                 </div>
+                
                 <div className="p-4 overflow-y-auto flex-1 space-y-2 min-h-[500px] max-h-[500px]">
-                    {messages.map((msg) => (
+                    {messages.length == 0 ? <p className='h-full flex items-center justify-center mt-20 text-gray-500'>No messages yet.</p> : messages.map((msg) => (
                         <div className='flex items-start gap-1'>
                             {msg.sender != "user" ? <p className='bg-purple-950 flex items-center justify-center rounded-full min-h-[25px] min-w-[25px]'>
                                 <Bot size={16} color='#fff' />
