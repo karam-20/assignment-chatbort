@@ -114,12 +114,12 @@ const Chatbot = () => {
         }, 2000);
     };
 
-    const handleKeyPress = (e) => {
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') handleSend();
     };
     return (
         <div className='bg-gray-200 h-screen'>
-            <div className="fixed bottom-4 right-4 w-100 bg-white rounded-xl shadow-lg flex flex-col ">
+            <div className="fixed bottom-4 right-4 sm:w-100 w-full bg-white rounded-xl shadow-lg flex flex-col ">
                 <div className='flex items-center gap-2 m-3'>
                     <p className='bg-purple-950 flex items-center justify-center rounded-full min-h-[35px] min-w-[35px]'>
                         <Bot size={20} color='#fff' />
